@@ -1,0 +1,7 @@
+Note: cp, csp, paillier_NewOpt mean server 0 (S_0), server 1 (S_1) and FastPaiTD, respectively.
+Besides, client means data owner.
+
+Starting sequence:
+1. Start csp.py
+2. Start cp.py
+3. Start client.py
