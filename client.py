@@ -168,6 +168,7 @@ if __name__ == "__main__":
     result_dec_smul = []
     for i in range(len(plaintext1)):
         time_, e_xy = sec_mul(ciphertext_list1[i], ciphertext_list2[i], cp_link)
+        print(time_)
         result_dec_smul.append(paillier_NewOpt.Dec_NewOpt(private_key, e_xy))
     print("smul -- result under ciphertext:")
     print(result_dec_smul)
@@ -187,6 +188,7 @@ if __name__ == "__main__":
     result_dec_scmp = []
     for i in range(len(plaintext1)):
         time_, e_u = sec_cmp(ciphertext_list1[i], ciphertext_list2[i], cp_link)
+        print(time_)
         result_dec_scmp.append(paillier_NewOpt.Dec_NewOpt(private_key, e_u))
     print("scmp -- result under ciphertext:")
     print(result_dec_scmp)
@@ -206,6 +208,7 @@ if __name__ == "__main__":
     result_dec_ssba = []
     for i in range(len(plaintext1)):
         time_, e_s, another_x = sec_ssba(ciphertext_list1[i], cp_link)
+        print(time_)
         result_dec_ssba.append(
             [paillier_NewOpt.Dec_NewOpt(private_key, e_s), paillier_NewOpt.Dec_NewOpt(private_key, another_x)])
     print("ssba -- result under ciphertext:")
@@ -243,6 +246,7 @@ if __name__ == "__main__":
     result_dec_sdiv = []
     for i in range(len(plaintext1)):
         time_, e_q, e_e = sec_div(ciphertext_list1_div[i], ciphertext_list2_div[i], cp_link)
+        print(time_)
         result_dec_sdiv.append(
             [paillier_NewOpt.Dec_NewOpt(private_key, e_q), paillier_NewOpt.Dec_NewOpt(private_key, e_e)])
     print("sdiv -- result under ciphertext:")
