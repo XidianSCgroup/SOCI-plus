@@ -237,7 +237,8 @@ def Ngen(k=112):
                             break
 
             # case2 P is a not prime and Q is a prime, re-compute P
-            if P_is_prime and not Q_is_prime:
+            # if P_is_prime and not Q_is_prime:
+            if not P_is_prime and Q_is_prime:
                 while True:
                     p_another = get_odd_len_integer((n_k - l_k) // 2 - 1)
                     if gmpy2.gcd(p_another, q_another) == 1 and gmpy2.mod(p_another, p) != 0 and gmpy2.mod(p_another,
